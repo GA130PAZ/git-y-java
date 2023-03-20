@@ -1,1 +1,3 @@
-habia que arrancar: "holamundo" "soy el mejor programador del mundo"
+habia que arrancar: "holamundo"
+ "soy el mejor programador del mundo"
+ "vivo en un pais de primer mundo, cobro en dolares"
