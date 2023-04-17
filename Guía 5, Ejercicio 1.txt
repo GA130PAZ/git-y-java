@@ -1,0 +1,27 @@
+Guía 5, Ejercicio 1
+
+ * Realizar un algoritmo que llene un vector con los 100 primeros números
+enteros y los muestre por pantalla en orden descendente
+ */
+package guía.pkg9.encuentro.pkg10;
+
+/**
+ *
+ * @author chayo
+ */
+public class Ejercicio1 {
+    
+public static void main(String[] args) {
+   
+    int [] Vector = new int [100];
+   
+    for (int i=99; i>-1; i--){
+        
+        Vector [i] = i+1;
+        
+        System.out.println(Vector [i] + " ");
+    }
+           
+       
+ }
+}

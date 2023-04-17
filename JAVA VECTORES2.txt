@@ -1,0 +1,60 @@
+/*
+     Realizar un algoritmo que llene un vector de tamaño N con valores aleatorios
+    y le pida al usuario un número a buscar en el vector. El programa mostrará 
+    dónde se encuentra el numero y si se encuentra repetido
+
+     */
+    public static final Scanner sc= new Scanner(System.in) ;
+    
+
+    public Guia5Ejercicio2() {
+    }
+    public static void main(String[] args) {
+        
+      int []vector= numeroAleatorio ();
+      buscarNumero (vector);
+    }
+       public static int[] numeroAleatorio (){
+           
+           System.out.println("Ingrese el tamaño del Vector: ");
+           int n=sc.nextInt();
+           Random azar=new Random();
+           
+           int [] vector=new int [n];
+           
+           for (int i = 0; i < n; i++) {
+               vector[i]=azar.nextInt(100);
+               
+               
+           }
+           System.out.println("Los numeros son: ");
+        mostrarVector (vector);
+        
+           return vector;
+    }
+    public static void buscarNumero (int [] vector){
+        boolean encontrado = false;
+        
+        System.out.println("Que numero quiere buscar: ");
+        int num=sc.nextInt();
+        int contador=0;
+        for (int i = 0; i < vector.length ; i++) {
+            if (num==vector[i]) {
+                System.out.println("posicion: "+i);
+                contador++;
+                
+                encontrado=true;
+                
+            }
+            
+        }
+        System.out.println("El numero aparece " +contador+ " vez");
+        
+    }
+    public static void mostrarVector (int[] vector){
+                for (int i = 0; i < vector.length ; i++) {
+                    System.out.println(vector[i]);
+                    
+                }
+            }
+}

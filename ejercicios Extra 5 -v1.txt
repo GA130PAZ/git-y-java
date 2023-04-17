@@ -1,0 +1,39 @@
+package ejemplolecturayentrada;
+
+import java.util.Scanner; // Este es el importe de la clase Scanner
+
+public class EjemploScanner {
+
+    public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in);
+        String clase;
+        String claseMayus;
+        double costo, importe;
+
+        System.out.print("Ingrese la clase del socio (A, B o C): ");
+        clase = leer.next();
+        claseMayus= clase.toUpperCase();
+        System.out.print("Ingrese el costo del tratamiento: ");
+        costo = leer.nextDouble();
+
+        switch (claseMayus) {
+            case "A":
+                importe = costo * 0.5;
+                break;
+            case "B":
+                importe = costo * 0.65;
+                break;
+            case "C":
+                importe = costo;
+                break;
+            default:
+                System.out.println("La clase ingresada es inválida.");
+                return;
+        }
+
+        System.out.println("El importe a pagar es: " + importe);
+
+    }
+
+}

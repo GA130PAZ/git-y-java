@@ -1,0 +1,19 @@
+public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese cantidad de personas");
+        int persona = leer.nextInt();
+        System.out.println("Nombre:");
+        String nomb;
+        nomb = leer.nextLine();
+        System.out.println("edad");
+        int edad = leer.nextInt();
+        do {
+            if(edad < 18){
+            System.out.println("Es menor");
+        }else 
+                System.out.println("Es mayor");
+            persona=persona -1;
+        } while (persona>0);
+        
+    }

@@ -1,0 +1,60 @@
+Recorrer un vector de N enteros contabilizando cuántos números son de
+1 dígito, cuántos de 2 dígitos, etcétera (hasta 5 dígitos).
+ */
+package guía.pkg9.encuentro.pkg10;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author chayo
+ */
+public class Ejercicio3 {
+    
+public static void main(String[] args) {
+   
+    int Digito; int Digito1=0; int Digito2 =0; int Digito3 =0; int Digito4 =0; int Digito5 =0;
+     
+     Scanner leer = new Scanner (System.in);
+     
+     int Vector []= new int[20];
+     
+     for (int i=0; i<20; i++) {
+         
+         Vector [i] = (int) (Math.random()*100);
+         
+         Digito = String.valueOf(Vector[i]).length();
+          
+      
+     switch (Digito) {
+     
+         case 1: 
+             Digito1++;
+             break;
+         case 2: 
+             Digito2++;
+             break;
+         case 3: 
+             Digito3++;
+             break;
+         case 4: 
+             Digito4++;
+             break;
+         case 5: 
+             Digito5++;
+             break;
+         default:
+             break;
+             
+        
+     }
+     }
+    
+     System.out.println("Hay " + Digito1 + " Elementos de 1 dígito.");
+     System.out.println("Hay " + Digito2 + " Elementos de 2 dígito.");
+     System.out.println("Hay " + Digito3 + " Elementos de 3 dígito.");
+     System.out.println("Hay " + Digito4 + " Elementos de 4 dígito.");
+     System.out.println("Hay " + Digito5 + " Elementos de 5 dígito.");
+}
+    
+}

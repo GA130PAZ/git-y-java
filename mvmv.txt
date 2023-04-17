@@ -1,0 +1,52 @@
+Scanner sc=new Scanner(System.in);
+        System.out.println("Ingrese la longitud de su vector");
+        int n = sc.nextInt();
+        int [] vector= crearVector(n);
+        digitos(vector);
+    }
+    public static int[] crearVector(int n) {
+        Random azar = new Random();
+        int[] vector = new int[n];
+        for (int i = 0; i < n; i++) {
+            vector[i] = azar.nextInt(99999);
+        }
+        System.out.println("Los valores de su vector son: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(vector[i]+"|");
+        }
+        return vector;
+}
+    public static void digitos(int[] vector){
+        int c1=0,c2=0,c3=0,c4=0,c5=0;
+        for (int i = 0; i < vector.length; i++) {
+            double valor= vector[i];
+            double lon= Math.log10(valor);
+            if (lon<1) {
+                c1++;
+            }else{
+                if (lon<2) {
+                    c2++;
+                }else{
+                    if (lon<3) {
+                        c3++;
+                    }else{
+                        if (lon<4) {
+                            c4++;
+                        }else{
+                            if (lon<5) {
+                                c5++;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        System.out.println(" ");
+        System.out.println("1 dígito = "+c1);
+        System.out.println("2 dígito = "+c2);
+        System.out.println("3 dígito = "+c3);
+        System.out.println("4 dígito = "+c4);
+        System.out.println("5 dígito = "+c5);
+    }
+}
